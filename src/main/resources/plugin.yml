@@ -1,9 +1,9 @@
-name: DeadBeSpectators
-version: 1.0
-main: com.github.nishitox.deadbespectators.DeadBeSpectators
+name: DeadSpectators
+version: ${project.version}
+main: com.github.nishitox.deadspectators.DeadSpectators
 api-version: 1.15
 
 commands:
   deadBeSpectators:
-    usage: "§cusage: /deadbespectators [enable|disable|config]"
+    usage: "§cusage: /deadspectators [enable|disable|config]"
     permission: op

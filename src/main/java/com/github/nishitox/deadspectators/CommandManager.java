@@ -1,4 +1,4 @@
-package com.github.nishitox.deadbespectators;
+package com.github.nishitox.deadspectators;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 
 public class CommandManager implements CommandExecutor, TabCompleter {
-    DeadBeSpectators plugin = DeadBeSpectators.getPlugin();
+    DeadSpectators plugin = DeadSpectators.getPlugin();
     String msgHeader = "\n§7[DeadBeSpectators] ";
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

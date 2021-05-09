@@ -1,4 +1,4 @@
-package com.github.nishitox.deadbespectators;
+package com.github.nishitox.deadspectators;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,11 +12,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class DeadBeSpectators extends JavaPlugin implements Listener {
-    static DeadBeSpectators plugin;
+public final class DeadSpectators extends JavaPlugin implements Listener {
+    static DeadSpectators plugin;
     static FileConfiguration config;
 
-    static DeadBeSpectators getPlugin() {
+    static DeadSpectators getPlugin() {
         return plugin;
     }
 
@@ -26,7 +26,7 @@ public final class DeadBeSpectators extends JavaPlugin implements Listener {
         config = this.getConfig();
 
         this.getServer().getPluginManager().registerEvents(this, this);
-        this.getCommand("deadbespectators").setExecutor(new CommandManager());
+        this.getCommand("deadspectators").setExecutor(new CommandManager());
     }
 
     public void onDisable() {
@@ -34,7 +34,7 @@ public final class DeadBeSpectators extends JavaPlugin implements Listener {
 
     @EventHandler
     void playerDeath(PlayerDeathEvent event) {
-        if (config.getBoolean("deadBeSpectators")) {
+        if (config.getBoolean("deadSpectators")) {
             Player player = event.getEntity().getPlayer();
 
             player.setGameMode(GameMode.SPECTATOR);
