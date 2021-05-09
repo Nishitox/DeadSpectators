@@ -4,6 +4,6 @@ main: com.github.nishitox.deadspectators.DeadSpectators
 api-version: 1.15
 
 commands:
-  deadBeSpectators:
+  deadSpectators:
     usage: "§cusage: /deadspectators [enable|disable|config]"
     permission: op

@@ -10,7 +10,7 @@ import org.bukkit.command.TabCompleter;
 
 public class CommandManager implements CommandExecutor, TabCompleter {
     DeadSpectators plugin = DeadSpectators.getPlugin();
-    String msgHeader = "\n§7[DeadBeSpectators] ";
+    String msgHeader = "\n§7[DeadSpectators] ";
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0)
@@ -18,12 +18,12 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
         // config: dead be spectators
         if (args[0].equalsIgnoreCase("enable")) {
-            this.plugin.setConfig("deadBeSpectators", true);
+            this.plugin.setConfig("deadSpectators", true);
             sender.sendMessage(this.msgHeader + "plugin has been enabled!");
             return true;
         }
         if (args[0].equalsIgnoreCase("disable")) {
-            this.plugin.setConfig("deadBeSpectators", false);
+            this.plugin.setConfig("deadSpectators", false);
             sender.sendMessage(this.msgHeader + "plugin has been disabled.");
             return true;
         }
